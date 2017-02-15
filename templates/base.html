@@ -1,0 +1,60 @@
+{% load i18n %}<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ MEDIA_URL}}css/blueprint/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection" />
+  	<!--[if IE]><link rel="stylesheet" href="{{ MEDIA_URL}}css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="{{ MEDIA_URL}}css/django-profile.css" type="text/css" media="screen, projection" />
+    {% block extracss %}{% endblock %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    {% block extrajs %}{% endblock %}
+	<meta name="robots" content="{% block robots %}index,follow{% endblock %}" />
+	{% block extrahead %}{% endblock extrahead %}
+	<link rel="shortcut icon" href="/media/images/blankon.ico" type="image/x-icon" />
+</head>
+
+<body>
+	<div class="container">
+		<div id="header">
+			<div class="span-16">
+			    <a href="/"><img border="0" src="/media/images/blankon.png"  alt="Go to start page" /></a>
+				<!--h1><a href="/"><strong>{% trans "Aku - BlankOn Authentication" %}</strong></a></h1-->
+				<p>{% trans "BlankOn Authentication - One Login for Your Accounts" %}</p>
+			</div>
+			<div class="span-8 last">
+				<ul class="hmenu large three">
+					<li><a href="/">{% trans "Home" %}</a></li>
+					{% if user.is_authenticated %}
+					<li><a href="{% url profile_overview %}">{% trans "Profile" %}</a></li>
+   				<li><a href="{% url logout %}">{% trans "Logout" %}</a></li>
+					{% else %} 
+					<li><a href="{% url profile_overview %}">{% trans "Login" %}</a></li>
+					<li><a href="{% url signup %}">{% trans "Register" %}</a></li>
+  				{% endif %}
+				</ul>
+			</div>
+		</div>
+		<hr />
+
+		{% block nav-main %}{% endblock %}
+		<!-- END navigation -->
+
+		<div id="columnwrap">
+			{% block columnwrap %}
+				<div id="content-main" class="span-22 prepend-1 append-1">
+				{% block content %}{% endblock %}
+				</div><!-- END content-main -->
+			{% endblock %}
+		</div><!-- END content -->
+		<div id="footer">
+		    <br />
+		    <hr />
+		    <a href="http://www.blankonlinux.or.id">{% trans "BlankOn Developer" %}</a> |
+		    <a href="/privacy.html">{% trans "Privacy Policy" %}</a>
+		</div>
+	</div>
+</body>
+</html>

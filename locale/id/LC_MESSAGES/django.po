@@ -1,0 +1,890 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-25 07:27+0700\n"
+"PO-Revision-Date: 2011-09-25 07:27+0700\n"
+"Last-Translator: Akhmat Safrudin <somat@di.blankon.in>\n"
+"Language-Team: Indonesia <info@blankonlinux.or.id>\n"
+"Language: id-ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: auth/countries.py:8
+msgid "Indonesia"
+msgstr "Indonesia"
+
+#: auth/countries.py:254
+msgid "This value must be in COUNTRIES setting in localflavor.generic package."
+msgstr ""
+
+#: auth/forms.py:61
+#, python-format
+msgid "The file type is invalid: %s"
+msgstr ""
+
+#: auth/forms.py:65
+msgid "You must enter one of the options"
+msgstr ""
+
+#: auth/forms.py:78
+msgid "You must select a portion of the image with a minimum of 96x96 pixels."
+msgstr ""
+
+#: auth/forms.py:83 auth/templates/userprofile/account/login.html:21
+#: auth/templates/userprofile/account/registration.html:21
+#: auth/templates/userprofile/profile/public.html:33
+#: auth/templates/userprofile/profile/usercard.html:11
+msgid "Username"
+msgstr ""
+
+#: auth/forms.py:84 auth/templates/userprofile/account/password_reset.html:22
+msgid "E-mail address"
+msgstr ""
+
+#: auth/forms.py:85 auth/templates/userprofile/account/login.html:27
+#: auth/templates/userprofile/account/registration.html:33
+msgid "Password"
+msgstr ""
+
+#: auth/forms.py:86 auth/templates/userprofile/account/registration.html:39
+msgid "Password (again)"
+msgstr ""
+
+#: auth/forms.py:93
+msgid ""
+"That username has invalid characters. The valid values are letters, numbers and underscore."
+msgstr ""
+
+#: auth/forms.py:97
+msgid "The username is already registered."
+msgstr ""
+
+#: auth/forms.py:105
+msgid "The passwords inserted are different."
+msgstr ""
+
+#: auth/forms.py:114 auth/forms.py:131
+msgid "That e-mail is already used."
+msgstr ""
+
+#: auth/forms.py:118
+msgid "That e-mail is already being confirmed."
+msgstr ""
+
+#: auth/models.py:25 auth/templates/userprofile/profile/delete.html:15
+#: auth/templates/userprofile/profile/sshkeys_delete.html:36
+msgid "Yes"
+msgstr ""
+
+#: auth/models.py:25
+msgid "No"
+msgstr ""
+
+#: auth/models.py:43
+#, python-format
+msgid "%s's profile"
+msgstr ""
+
+#: auth/models.py:58
+#, python-format
+msgid "%s's Avatar"
+msgstr ""
+
+#: auth/models.py:133
+#, python-format
+msgid "Email validation process for %(user)s"
+msgstr ""
+
+#: auth/templates/userprofile/menu.html:5
+msgid "Overview"
+msgstr ""
+
+#: auth/templates/userprofile/menu.html:6
+msgid "Survey"
+msgstr ""
+
+#: auth/templates/userprofile/menu.html:7
+msgid "Avatar"
+msgstr ""
+
+#: auth/templates/userprofile/menu.html:8
+#: auth/templates/userprofile/profile/location.html:27
+#: auth/templates/userprofile/profile/overview.html:60
+#: auth/templates/userprofile/profile/public.html:38
+msgid "Location"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation.html:4
+#: auth/templates/userprofile/account/email_validation.html:24
+msgid "E-mail change"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation.html:4
+#: auth/templates/userprofile/account/email_validation.html:24
+#: auth/templates/userprofile/account/email_validation.html:41
+#: auth/templates/userprofile/account/email_validation_processed.html:20
+msgid "Add e-mail"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation.html:25
+msgid "New e-mail address"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation.html:35
+msgid "Send confirmation"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation.html:42
+#: auth/templates/userprofile/account/email_validation_processed.html:21
+msgid ""
+"Insert the new e-mail address. An e-mail will be send to it for testing and confirmation"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_done.html:4
+msgid "E-mail validation successful"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_done.html:4
+msgid "E-mail change unsuccessful"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_done.html:14
+msgid "E-mail address validated successfully"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_done.html:16
+msgid ""
+"The key you received via e-mail is no longer valid. Please try the e-mail validation process again"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_done.html:23
+#: auth/templates/userprofile/account/email_validation_reset_response.html:22
+msgid "E-mail validation process"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_done.html:24
+#: auth/templates/userprofile/account/email_validation_reset_response.html:23
+msgid "You can manage the e-mail validation process from the"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_done.html:24
+#: auth/templates/userprofile/account/email_validation_reset_response.html:23
+msgid "overview page"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_processed.html:4
+#: auth/templates/userprofile/account/email_validation_processed.html:13
+msgid "E-mail change processed"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_processed.html:14
+msgid ""
+"An e-mail has been sent to the new e-mail address to verify and activate it. Please access to your e-mail and complete this process following the instructions specified in the e-mail body"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_reset_response.html:4
+msgid "Validation e-mail sent"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_reset_response.html:4
+msgid "Your user account was already active"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_reset_response.html:14
+msgid "We've e-mailed you the e-mail validation link"
+msgstr ""
+
+#: auth/templates/userprofile/account/email_validation_reset_response.html:16
+msgid "Your e-mail was already validated"
+msgstr ""
+
+#: auth/templates/userprofile/account/login.html:4
+#: auth/templates/userprofile/account/login.html:20
+msgid "User login"
+msgstr ""
+
+#: auth/templates/userprofile/account/login.html:37 templates/base.html:34
+msgid "Login"
+msgstr ""
+
+#: auth/templates/userprofile/account/login.html:44
+msgid "Utilities"
+msgstr ""
+
+#: auth/templates/userprofile/account/login.html:45
+msgid "Lost your password?"
+msgstr ""
+
+#: auth/templates/userprofile/account/login.html:47
+msgid "Sign up!"
+msgstr ""
+
+#: auth/templates/userprofile/account/logout.html:4
+#: auth/templates/userprofile/account/logout.html:9
+msgid "Logged out"
+msgstr ""
+
+#: auth/templates/userprofile/account/logout.html:10
+msgid "You've been logged out"
+msgstr ""
+
+#: auth/templates/userprofile/account/logout.html:10
+msgid "Log in again"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change.html:4
+#: auth/templates/userprofile/account/password_change.html:24
+#: auth/templates/userprofile/account/password_reset_confirm.html:4
+msgid "Password change for"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change.html:25
+msgid "Old password"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change.html:31
+#: auth/templates/userprofile/account/password_reset_confirm.html:27
+msgid "New password"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change.html:37
+#: auth/templates/userprofile/account/password_reset_confirm.html:33
+msgid "Confirm password"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change.html:47
+#: auth/templates/userprofile/account/password_reset_confirm.html:43
+msgid "Change"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change.html:53
+#: auth/templates/userprofile/account/password_change_done.html:19
+msgid "Password change"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change.html:54
+#: auth/templates/userprofile/account/password_change_done.html:20
+msgid ""
+"Password change utility page. Please enter your new password twice so we can verify you typed it in correctly"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change_done.html:4
+#: auth/templates/userprofile/account/password_reset_complete.html:4
+msgid "Password change successful"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_change_done.html:13
+msgid "The password has been changed successfully"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_expired.html:4
+msgid "Password key expired"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_expired.html:9
+msgid ""
+"The password key you're trying to use is expired. Please, request a new one"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset.html:4
+#: auth/templates/userprofile/account/password_reset.html:21
+#: auth/templates/userprofile/account/password_reset_complete.html:19
+#: auth/templates/userprofile/account/password_reset_confirm.html:56
+msgid "Password reset"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset.html:32
+msgid "Reset my password"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset.html:38
+#: auth/templates/userprofile/account/password_reset_done.html:16
+msgid "Password reset form"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset.html:39
+#: auth/templates/userprofile/account/password_reset_done.html:17
+msgid ""
+"Forgotten your password? Enter your e-mail address, and we'll reset your password and e-mail the new one to you"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset_complete.html:13
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset_complete.html:20
+#: auth/templates/userprofile/account/password_reset_confirm.html:57
+msgid ""
+"Password reset utility page. Please enter your new password twice so we can verify you typed it in correctly"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset_confirm.html:48
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset_confirm.html:49
+msgid ""
+"The password reset link was invalid, possibly because it has already been used.  Please request a new password reset."
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset_done.html:4
+#: auth/templates/userprofile/account/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr ""
+
+#: auth/templates/userprofile/account/password_reset_done.html:10
+msgid ""
+"We've e-mailed you the instructions to obtain a new password. You should be receiving it shortly"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration.html:4
+#: auth/templates/userprofile/account/registration.html:20
+msgid "User registration"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration.html:27
+msgid "E-mail (optional)"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration.html:49
+#: templates/base.html:35
+msgid "Register"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration.html:55
+#: auth/templates/userprofile/account/registration_done.html:14
+msgid "Register a new account"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration.html:56
+#: auth/templates/userprofile/account/registration_done.html:15
+msgid ""
+"Joining this community is quick and easy. You only need to fill the form to get access to all the private content"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration_done.html:4
+msgid "Registration complete"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration_done.html:9
+msgid "You have successfully registered a new account. Go to the"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration_done.html:9
+msgid "login page"
+msgstr ""
+
+#: auth/templates/userprofile/account/registration_done.html:9
+msgid "to authenticate and start using this site"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/choose.html:4
+#: auth/templates/userprofile/avatar/choose.html:37
+msgid "Choose the location of your avatar"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/choose.html:40
+msgid "Select an image from disk"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/choose.html:42
+#: auth/templates/userprofile/avatar/choose.html:48
+#: auth/templates/userprofile/avatar/crop.html:48
+msgid "Done"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/choose.html:46
+msgid ""
+"Select an image from a remote URL. Put the URL on the input below and we'll retrieve the image for you"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/choose.html:53
+#: auth/templates/userprofile/avatar/search.html:4
+#: auth/templates/userprofile/avatar/search.html:28
+msgid "Search for an image on Picasa Web"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/choose.html:63
+#: auth/templates/userprofile/avatar/crop.html:54
+#: auth/templates/userprofile/avatar/done.html:19
+#: auth/templates/userprofile/avatar/search.html:50
+msgid "Avatar selection page"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/choose.html:64
+#: auth/templates/userprofile/avatar/crop.html:55
+#: auth/templates/userprofile/avatar/done.html:20
+#: auth/templates/userprofile/avatar/search.html:51
+msgid ""
+"You have several options to select the image you want as avatar on your profile"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/choose.html:70
+msgid "Delete"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/crop.html:4
+#: auth/templates/userprofile/avatar/crop.html:32
+msgid "Crop &amp; resize the area you want"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/done.html:4
+msgid "Avatar selection finished"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/done.html:13
+msgid "Your new avatar has been saved successfully"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/search.html:29
+msgid "Search on Picasa Web"
+msgstr ""
+
+#: auth/templates/userprofile/avatar/search.html:32
+msgid "Search"
+msgstr ""
+
+#: auth/templates/userprofile/profile/delete.html:4
+msgid "Delete personal information"
+msgstr ""
+
+#: auth/templates/userprofile/profile/delete.html:14
+#: auth/templates/userprofile/profile/delete_done.html:18
+msgid "Delete your personal information"
+msgstr ""
+
+#: auth/templates/userprofile/profile/delete.html:15
+msgid "Are you sure?"
+msgstr ""
+
+#: auth/templates/userprofile/profile/delete.html:22
+msgid "Remove profile"
+msgstr ""
+
+#: auth/templates/userprofile/profile/delete.html:23
+msgid ""
+"It erases all your private data except your username. You can refill the information later if you want to"
+msgstr ""
+
+#: auth/templates/userprofile/profile/delete_done.html:4
+msgid "Profile removed"
+msgstr ""
+
+#: auth/templates/userprofile/profile/delete_done.html:13
+msgid "Your profile information has been removed successfully"
+msgstr ""
+
+#: auth/templates/userprofile/profile/delete_done.html:19
+msgid ""
+"Deleting all your personal information will erase all your private data, except your username. You can refill the information later if you want to"
+msgstr ""
+
+#: auth/templates/userprofile/profile/location.html:4
+#: auth/templates/userprofile/profile/location_done.html:4
+#: auth/templates/userprofile/profile/personal_done.html:4
+#, python-format
+msgid "%(user)s's Dashboard"
+msgstr ""
+
+#: auth/templates/userprofile/profile/location.html:22
+msgid "Define your location"
+msgstr ""
+
+#: auth/templates/userprofile/profile/location.html:23
+#: auth/templates/userprofile/profile/overview.html:51
+#: auth/templates/userprofile/profile/public.html:35
+msgid "Country"
+msgstr ""
+
+#: auth/templates/userprofile/profile/location.html:29
+msgid "Position"
+msgstr ""
+
+#: auth/templates/userprofile/profile/location.html:36
+#: auth/templates/userprofile/profile/personal.html:31
+#: templates/userprofile/profile/personal.html:28
+msgid "Save"
+msgstr ""
+
+#: auth/templates/userprofile/profile/location.html:41
+#: auth/templates/userprofile/profile/location_done.html:19
+msgid "Location information"
+msgstr ""
+
+#: auth/templates/userprofile/profile/location.html:42
+#: auth/templates/userprofile/profile/location_done.html:20
+msgid "Define your location information"
+msgstr ""
+
+#: auth/templates/userprofile/profile/location_done.html:13
+#: auth/templates/userprofile/profile/personal_done.html:13
+msgid "Your profile information has been updated successfully"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:4
+#: auth/templates/userprofile/profile/overview.html:32
+msgid "Overview of your profile"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:37
+msgid "Change avatar"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:37
+msgid "Add avatar"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:41
+msgid "Username:"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:42
+msgid "E-mail:"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:44
+msgid "Not set yet"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:46
+msgid " (Not validated)"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:55
+#: auth/templates/userprofile/profile/overview.html:64
+msgid "Not set"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:82
+msgid "Management:"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:83
+msgid "Change password"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:85
+msgid "Change your e-mail address"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:85
+msgid "Add your e-mail address"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:86
+msgid "Resend validation e-mail"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:90
+msgid "Add location"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:92
+msgid "Change location"
+msgstr ""
+
+#: auth/templates/userprofile/profile/overview.html:94
+msgid "Manage SSH Key"
+msgstr ""
+
+#: auth/templates/userprofile/profile/personal.html:4
+#: auth/templates/userprofile/profile/personal.html:28
+#: templates/userprofile/profile/personal.html:4
+msgid "Edit your personal information"
+msgstr ""
+
+#: auth/templates/userprofile/profile/personal.html:37
+#: auth/templates/userprofile/profile/personal_done.html:19
+msgid "Personal information"
+msgstr ""
+
+#: auth/templates/userprofile/profile/personal.html:38
+#: auth/templates/userprofile/profile/personal_done.html:20
+msgid "Insert some information about you"
+msgstr ""
+
+#: auth/templates/userprofile/profile/public.html:27
+#, python-format
+msgid "Public profile of %(user)s"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:4
+#: auth/templates/userprofile/profile/sshkeys_manage.html:4
+msgid "Your ssh keys"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:16
+#: auth/templates/userprofile/profile/sshkeys_manage.html:16
+msgid "List of your ssh key"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:19
+msgid "Success"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:20
+msgid ""
+"You have successfully deleted the SSH key. You can add another keys if you want."
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:20
+msgid "here."
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:23
+msgid "Deletion failed"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:24
+msgid "Your request to delete the ssh key is failed."
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:31
+msgid "Are you sure to delete this key?"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:33
+msgid "Fingerprint"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:34
+msgid "Text"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:38
+msgid "Click here to cancel."
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:41
+msgid "Delete ssh key"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:42
+msgid "You have not specify the key you want to delete."
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:42
+msgid "Please go here"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:49
+#: auth/templates/userprofile/profile/sshkeys_manage.html:36
+msgid "SSH key manage page"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_delete.html:50
+#: auth/templates/userprofile/profile/sshkeys_manage.html:37
+msgid "You can manage your ssh key from the available form."
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_manage.html:21
+msgid "delete"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_manage.html:26
+msgid "You have no ssh keys"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_manage.html:29
+msgid "Upload new ssh key"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_upload.html:4
+#: auth/templates/userprofile/profile/sshkeys_upload.html:23
+msgid "Choose the location of your ssh key"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_upload.html:26
+msgid "Select an ssh key from disk"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_upload.html:28
+msgid "Upload"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_upload.html:38
+msgid "SSH key upload page"
+msgstr ""
+
+#: auth/templates/userprofile/profile/sshkeys_upload.html:39
+msgid "You can upload your ssh key from the available form."
+msgstr ""
+
+#: auth/templates/userprofile/profile/usercard.html:12
+msgid "Public profile information"
+msgstr ""
+
+#: auth/templatetags/avatars.py:62
+msgid ""
+"You have to provide only the size as             an integer (both sides will be equal) and optionally, the             username."
+msgstr ""
+
+#: openid_provider/models.py:12
+msgid "OpenID"
+msgstr ""
+
+#: openid_provider/models.py:13
+msgid "OpenIDs"
+msgstr ""
+
+#: profile/forms.py:29
+msgid "choose file"
+msgstr ""
+
+#: profile/forms.py:38
+#, python-format
+msgid "The file you uploaded ('%s') is too big"
+msgstr ""
+
+#: profile/forms.py:56
+#, python-format
+msgid "The file you uploaded ('%s') is not a valid SSH key file"
+msgstr ""
+
+#: profile/forms.py:58
+#, python-format
+msgid ""
+"The file you uploaded ('%s') is a compromised SSH key file. Replace it immediately"
+msgstr ""
+
+#: profile/models.py:11
+msgid "Female"
+msgstr ""
+
+#: profile/models.py:11
+msgid "Male"
+msgstr ""
+
+#: profile/models.py:47
+msgid "Student/College"
+msgstr ""
+
+#: profile/models.py:48
+msgid "Civil Servants"
+msgstr ""
+
+#: profile/models.py:49
+msgid "Private Employees"
+msgstr ""
+
+#: profile/models.py:50
+msgid "Entrepreneur"
+msgstr ""
+
+#: profile/models.py:64
+msgid "firstname"
+msgstr ""
+
+#: profile/models.py:65
+msgid "lastname"
+msgstr ""
+
+#: profile/models.py:66
+msgid "gender"
+msgstr ""
+
+#: profile/models.py:67
+msgid "birthdate"
+msgstr ""
+
+#: profile/models.py:68
+msgid "address"
+msgstr ""
+
+#: profile/models.py:69
+msgid "city"
+msgstr ""
+
+#: profile/models.py:70
+msgid "province"
+msgstr ""
+
+#: profile/models.py:71
+msgid "occupation"
+msgstr ""
+
+#: profile/models.py:72
+msgid "use BlankOn since"
+msgstr ""
+
+#: profile/models.py:73
+msgid "personal website"
+msgstr ""
+
+#: profile/models.py:74
+msgid "about me"
+msgstr ""
+
+#: profile/models.py:77
+msgid "user"
+msgstr ""
+
+#: profile/models.py:78
+msgid "fingerprint"
+msgstr ""
+
+#: profile/models.py:79
+msgid "key"
+msgstr ""
+
+#: templates/base.html:24 templates/front.html:3
+msgid "Aku - BlankOn Authentication"
+msgstr ""
+
+#: templates/base.html:25
+msgid "BlankOn Authentication - One Login for Your Accounts"
+msgstr ""
+
+#: templates/base.html:29
+msgid "Home"
+msgstr "Beranda"
+
+#: templates/base.html:31
+msgid "Profile"
+msgstr ""
+
+#: templates/base.html:32
+msgid "Logout"
+msgstr ""
+
+#: templates/base.html:55
+msgid "BlankOn Developer"
+msgstr ""
+
+#: templates/base.html:56 templates/privacy.html:6
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/front.html:6
+msgid "People who have already use Aku"
+msgstr ""
+
+#: templates/privacy.html:3
+msgid "Privacy - BlankOn Authentication"
+msgstr ""
+
+#: templates/privacy.html:10
+msgid " <h3>Information we collect and how we use it</h3> "
+msgstr ""
+
+#: templates/userprofile/profile/personal.html:24
+msgid "BlankOn User Survey"
+msgstr ""
+
+#: templates/userprofile/profile/personal.html:34
+msgid "BlankOn user survey"
+msgstr ""
+
+#: templates/userprofile/profile/personal.html:35
+msgid ""
+"Please help us to get information about BlankOn Linux user. Please refer to Privacy Policy to know more about this project."
+msgstr ""

@@ -1,0 +1,41 @@
+{% extends "base_2col.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Choose the location of your ssh key" %}{% endblock %}
+{% block robots %}noindex,nofollow{% endblock %}
+
+{% block extrajs %}
+{% endblock %}
+
+{% block nav-main %}
+{% include "userprofile/menu.html" %}
+{% endblock %}
+
+{% block content %}
+	<form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+	{% csrf_token %}
+		{% if form.errors %}
+			{% for error,desc in form.errors.items %}
+				<p class="error">{{desc|join:"; "}}</p>
+			{% endfor %}
+		{% endif %}
+		<fieldset>
+			<legend>{% trans "Choose the location of your ssh key" %}</legend>
+			<ul>
+			<li>
+				<label for="id_photo">{% trans "Select an ssh key from disk" %}:</label>
+				<p>{{ form.file }}
+				<input type="submit" value="{% trans 'Upload' %}" />
+				</p>
+			</li>
+			</ul>
+		</fieldset>
+		</form>
+{% endblock %}
+
+{% block content-related %}
+  <div class="box">
+    <h3>{% trans "SSH key upload page" %}</h3>
+		<p>{% trans "You can upload your ssh key from the available form." %}.</p>
+  </div>
+{% endblock %}

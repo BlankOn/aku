@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Aku - BlankOn Authentication" %}{% endblock %}
+
+{% block content %}
+<h2>{% trans "People who have already use Aku" %}</h2>
+
+{% for profile in profiles %}
+	{% include "userprofile/profile/usercard.html" %}
+{% endfor %}
+
+{% endblock %}
+

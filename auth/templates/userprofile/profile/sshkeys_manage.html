@@ -1,0 +1,39 @@
+{% extends "base_2col.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Your ssh keys" %}{% endblock %}
+{% block robots %}noindex,nofollow{% endblock %}
+
+{% block extrajs %}
+{% endblock %}
+
+{% block nav-main %}
+{% include "userprofile/menu.html" %}
+{% endblock %}
+
+{% block content %}
+		<fieldset>
+			<legend>{% trans "List of your ssh key" %}</legend>
+			{% if keys %}
+			<ul>
+			{% for key in keys %}
+				<li>
+				    {{key.fingerprint}} [<a href={% url delete_ssh_key %}{{key.fingerprint}}/>{% trans "delete" %}</a>]
+				</li>
+			{% endfor %}
+			</ul>
+			{% else %}
+			<p>{% trans "You have no ssh keys" %}</p>
+			{% endif %}
+			<p>
+			    <a href={% url upload_ssh_key %}>{% trans "Upload new ssh key" %}</a>
+			</p>
+		</fieldset>
+{% endblock %}
+
+{% block content-related %}
+  <div class="box">
+    <h3>{% trans "SSH key manage page" %}</h3>
+		<p>{% trans "You can manage your ssh key from the available form." %}.</p>
+  </div>
+{% endblock %}

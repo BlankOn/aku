@@ -1,6 +1,8 @@
 
 # Aku!
 
+Aku is SSO Auth for BlankOn ecosystem, originally developed by Fitria Aditya.
+
 ## Requirements
 
 - Python 2.6.6 (Use pyenv on your modern machine)

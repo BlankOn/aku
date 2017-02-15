@@ -1,0 +1,8 @@
+setuptools
+django-openid-auth==0.2
+python-openid
+django-debug-toolbar==0.9.4
+Django==1.2.5
+pillow==3.0.0
+python_social_auth==0.3.6
+gdata==2.0.18

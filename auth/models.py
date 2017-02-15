@@ -18,7 +18,7 @@ from auth.countries import CountryField
 import base64
 import cPickle as pickle
 import datetime
-import Image, ImageFilter
+from PIL import Image, ImageFilter
 import os.path
 
 AVATAR_SIZES = (128, 96, 64, 48, 32, 24, 16)

@@ -23,7 +23,7 @@ from xml.dom import minidom
 
 import base64
 import cPickle as pickle
-import Image
+from PIL import Image
 import os
 import random
 import urllib2
@@ -304,6 +304,6 @@ def email_validation_reset(request):
         response = "done"
     except EmailValidation.DoesNotExist:
         response = "failed"
-    return HttpResponseRedirect(reverse("email_validation_reset_response", 
+    return HttpResponseRedirect(reverse("email_validation_reset_response",
             args=[response]))
 

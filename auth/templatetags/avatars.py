@@ -6,7 +6,7 @@ from django.template import Library, Node, Template, TemplateSyntaxError, Variab
 from django.utils.translation import ugettext as _
 from auth.models import Avatar, AVATAR_SIZES
 
-import Image
+from PIL import Image
 import os
 import time
 

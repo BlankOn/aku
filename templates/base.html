@@ -9,8 +9,7 @@
   	<!--[if IE]><link rel="stylesheet" href="{{ MEDIA_URL}}css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 	<link rel="stylesheet" href="{{ MEDIA_URL}}css/django-profile.css" type="text/css" media="screen, projection" />
     {% block extracss %}{% endblock %}
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    {% block extrajs %}{% endblock %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<meta name="robots" content="{% block robots %}index,follow{% endblock %}" />
 	{% block extrahead %}{% endblock extrahead %}
 	<link rel="shortcut icon" href="/media/images/blankon.ico" type="image/x-icon" />
@@ -56,5 +55,6 @@
 		    <a href="/privacy.html">{% trans "Privacy Policy" %}</a>
 		</div>
 	</div>
+        {% block extrajs %}{% endblock %}
 </body>
 </html>

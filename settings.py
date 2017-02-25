@@ -56,7 +56,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
 )
 
-ROOT_URLCONF = 'aku.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates'),
@@ -88,7 +88,7 @@ DEFAULT_FROM_EMAIL = ''
 EMAIL_HOST = ''
 EMAIL_PORT = ''
 EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = '' 
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 
 ACCOUNT_ACTIVATION_DAYS = 3

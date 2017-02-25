@@ -56,7 +56,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
 )
 
-ROOT_URLCONF = 'aku.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates'),
@@ -80,16 +80,16 @@ DEFAULT_AVATAR = os.path.join(MEDIA_ROOT, 'generic.jpg')
 AVATAR_WEBSEARCH = True
 
 # 127.0.0.1:8000 Google Maps API Key
-GOOGLE_MAPS_API_KEY = "ABQIAAAA06IJoYHDPFMx4u3hTtaghxTpH3CbXHjuCVmaTc5MkkU4wO1RRhST5bKY_U7dUG1ZGu1S-n-ukXGNjQ"
+GOOGLE_MAPS_API_KEY = ""
 
 AUTH_PROFILE_MODULE = 'profile.profile'
 
-DEFAULT_FROM_EMAIL = ''
-EMAIL_HOST = ''
-EMAIL_PORT = ''
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = '' 
-EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'username@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'username@gmail.com'
+EMAIL_HOST_PASSWORD = 'password'
+EMAIL_USE_TLS = True
 
 ACCOUNT_ACTIVATION_DAYS = 3
 LOGIN_REDIRECT_URL = '/'

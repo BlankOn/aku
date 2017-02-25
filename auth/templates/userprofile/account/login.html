@@ -3,16 +3,6 @@
 
 {% block title %}{% trans "User login" %}{% endblock %}
 {% block robots %}noindex,nofollow{% endblock %}
-
-{% block extrajs %}
-<script type="text/javascript">
-	$(function() {
-		$("input[type='text'], input[type='password']").addClass("text");
-		$("#id_username").focus();
-	});
-</script>
-{% endblock %}
-
 {% block content %}
 	<form action="{% url django.contrib.auth.views.login %}" method="post" accept-charset="utf-8">
 	{% csrf_token %}
@@ -47,4 +37,14 @@
 		<a href="{% url signup %}">{% trans "Sign up!" %}</a>
 		<br />
 	</div>
+{% endblock %}
+{% block extrajs %}
+<script type="text/javascript">
+	$(function() {
+		$("input[type='text'], input[type='password']").addClass("text");
+		$("#id_username").focus();
+		var next = document.location.search.split("?next=")[1] || "/";
+		$("input[name='next']").val(next);
+	});
+</script>
 {% endblock %}

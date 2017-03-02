@@ -59,7 +59,7 @@ if AVATAR_WEBSEARCH:
     import gdata.photos.service
 
 def get_profiles():
-    return Profile.objects.order_by("-date")
+    return Profile.objects.order_by("-date")[:30]
 
 def fetch_geodata(request, lat, lng):
     if request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':

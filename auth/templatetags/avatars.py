@@ -5,12 +5,14 @@ import time
 
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.core.exceptions import ObjectDoesNotExist
 from django.template import (Library, Node, Template, TemplateSyntaxError,
                              Variable)
 from django.utils.translation import ugettext as _
 from PIL import Image
 
 from auth.models import AVATAR_SIZES, Avatar
+from gravatar.templatetags import gravatar
 
 register = Library()
 
@@ -37,27 +39,28 @@ class ResizedThumbnailNode(Node):
             self.size = int(self.size.resolve(context))
         if self.size not in AVATAR_SIZES:
             return ''
+
+        user = self.user.resolve(context)
         try:
-            user = self.user.resolve(context)
-            avatar = Avatar.objects.get(user=user, valid=True).image
-            avatar_path = avatar.path
-            base, filename = os.path.split(avatar_path)
-            name, extension = os.path.splitext(filename)
-            filename = os.path.join(base,
-                                    "%s.%s%s" % (name, self.size, extension))
-            base, temp = os.path.split(avatar.url)
-            url = os.path.join(base, "%s.%s%s" % (name, self.size, extension))
-        except:
-            avatar_path = DEFAULT_AVATAR
-            base, filename = os.path.split(avatar_path)
-            generic, extension = os.path.splitext(filename)
-            filename = os.path.join(base, "%s.%s%s" %
-                                    (generic, self.size, extension))
-            url = filename.replace(settings.MEDIA_ROOT, settings.MEDIA_URL)
+            avatar = Avatar.objects.get(user=user, valid=True)
+            avatar_path = avatar.image.path
+        except ObjectDoesNotExist:
+            if settings.GRAVATAR:
+                if gravatar.has_gravatar(user):
+                    return gravatar.gravatar_for_user(
+                        user=user, size=self.size)
+            else:
+                avatar_path = DEFAULT_AVATAR
+
+        path, filename = os.path.split(avatar_path)
+        name, extension = os.path.splitext(filename)
+        filename = os.path.join(path, "%s.%s%s" % (name, self.size, extension))
         if not os.path.isfile(filename):
             image = Image.open(avatar_path)
             image.thumbnail((self.size, self.size), Image.ANTIALIAS)
             image.save(filename, "JPEG")
+
+        url = filename.replace(settings.MEDIA_ROOT, settings.MEDIA_URL)
         return url
 
 

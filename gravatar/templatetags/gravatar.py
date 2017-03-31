@@ -41,6 +41,19 @@ def _get_gravatar_id(email):
     return md5_constructor(email).hexdigest()
 
 
+def has_gravatar(user):
+    """
+    Returns True if the user has a gravatar, False if otherwise
+    """
+
+    response = gravatar_profile_for_user(user)
+    try:
+        response['entry'][0]
+        return True
+    except TypeError:
+        return False
+
+
 @register.simple_tag
 def gravatar_for_email(email, size=None, rating=None):
     """

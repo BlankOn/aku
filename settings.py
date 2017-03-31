@@ -69,6 +69,7 @@ INSTALLED_APPS = (
     'profile', )
 
 DEFAULT_AVATAR = os.path.join(MEDIA_ROOT, 'generic.jpg')
+GRAVATAR = False
 
 AVATAR_WEBSEARCH = True
 

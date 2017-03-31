@@ -68,12 +68,15 @@ class Avatar(models.Model):
     def delete(self):
         base, filename = os.path.split(self.image.path)
         name, extension = os.path.splitext(filename)
-        for key in AVATAR_SIZES:
-            try:
-                os.remove(
-                    os.path.join(base, "%s.%s%s" % (name, key, extension)))
-            except:
-                pass
+        try:
+            for key in AVATAR_SIZES:
+                path = os.path.join(base, "%s.%s%s" % (name, key, extension))
+                if os.path.isfile(path):
+                    os.remove(path)
+            if os.path.isfile(self.image.path):
+                os.remove(self.image.path)
+        except:
+            pass
         super(Avatar, self).delete()
 
     def save(self):

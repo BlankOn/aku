@@ -3,12 +3,12 @@ import urllib
 from django import template
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.utils import simplejson
 from django.utils.hashcompat import md5_constructor
 from django.utils.html import escape
-from django.utils import simplejson
 
 GRAVATAR_URL_PREFIX = getattr(settings, "GRAVATAR_URL_PREFIX",
-                                      "http://www.gravatar.com/")
+                              "http://www.gravatar.com/")
 GRAVATAR_DEFAULT_IMAGE = getattr(settings, "GRAVATAR_DEFAULT_IMAGE", "")
 GRAVATAR_DEFAULT_RATING = getattr(settings, "GRAVATAR_DEFAULT_RATING", "g")
 GRAVATAR_DEFAULT_SIZE = getattr(settings, "GRAVATAR_DEFAULT_SIZE", 80)
@@ -19,7 +19,7 @@ register = template.Library()
 
 def _imgclass_attr():
     if GRAVATAR_IMG_CLASS:
-        return ' class="%s"' % (GRAVATAR_IMG_CLASS,)
+        return ' class="%s"' % (GRAVATAR_IMG_CLASS, )
     return ''
 
 
@@ -55,13 +55,15 @@ def gravatar_for_email(email, size=None, rating=None):
         {% gravatar_for_email someone@example.com 48 pg %}
     """
     gravatar_url = "%savatar/%s" % (GRAVATAR_URL_PREFIX,
-            _get_gravatar_id(email))
+                                    _get_gravatar_id(email))
 
-    parameters = [p for p in (
-        ('d', GRAVATAR_DEFAULT_IMAGE),
-        ('s', size or GRAVATAR_DEFAULT_SIZE),
-        ('r', rating or GRAVATAR_DEFAULT_RATING),
-    ) if p[1]]
+    parameters = [
+        p
+        for p in (
+            ('d', GRAVATAR_DEFAULT_IMAGE),
+            ('s', size or GRAVATAR_DEFAULT_SIZE),
+            ('r', rating or GRAVATAR_DEFAULT_RATING), ) if p[1]
+    ]
 
     if parameters:
         gravatar_url += '?' + urllib.urlencode(parameters, doseq=True)

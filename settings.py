@@ -7,9 +7,7 @@ TEMPLATE_DEBUG = DEBUG
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-ADMINS = (
-    ('Fitra Aditya', 'aditya.fp@gmail.com'),
-)
+ADMINS = (('Fitra Aditya', 'aditya.fp@gmail.com'), )
 
 MANAGERS = ADMINS
 
@@ -45,22 +43,18 @@ SECRET_KEY = '!(p&y-8f6gdtdfzn7qp7f0b+yw*l+)caeept1rl7v$zqaz7o23'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-    'django.template.loaders.eggs.Loader',
-)
+    'django.template.loaders.eggs.Loader', )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-)
+    'django.middleware.locale.LocaleMiddleware', )
 
 ROOT_URLCONF = 'urls'
 
-TEMPLATE_DIRS = (
-    os.path.join(PROJECT_PATH, 'templates'),
-)
+TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, 'templates'), )
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -72,8 +66,7 @@ INSTALLED_APPS = (
     'django_openid_auth',
     'openid_provider',
     'auth',
-    'profile',
-)
+    'profile', )
 
 DEFAULT_AVATAR = os.path.join(MEDIA_ROOT, 'generic.jpg')
 

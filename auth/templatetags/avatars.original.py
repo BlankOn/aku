@@ -1,18 +1,21 @@
-# coding=UTF-8
+from __future__ import print_function
+
+from os import makedirs, path
+from shutil import copy
 
 from django.conf import settings
 from django.contrib.auth.models import User
-from django.template import Library, Node, Template, TemplateSyntaxError, Variable
+from django.template import (Library, Node, Template, TemplateSyntaxError,
+                             Variable)
 from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext as u_
+
 from auth import profile_settings as _settings
 from auth.models import Profile
 from utils.TuxieMagick import Image
 
-from os import path, makedirs
-from shutil import copy
-
 register = Library()
+
 
 class ResizedThumbnailNode(Node):
     def __init__(self, size, username=None):
@@ -21,6 +24,7 @@ class ResizedThumbnailNode(Node):
         except:
             self.size = Variable(size)
         self.user = username
+
     def get_user(self, context):
         # If there's a username, go get it! Otherwise get the current.
         if self.user:
@@ -31,23 +35,26 @@ class ResizedThumbnailNode(Node):
         else:
             user = Variable('user').resolve(context)
         return user
+
     def size_equals(self, file=None):
         if not file:
             return self.size == _settings.DEFAULT_AVATAR_WIDTH
         else:
             return self.size == Image(file).size().width()
+
     def get_profile(self):
         # Maybe django-profile it's not set as AUTH_PROFILE_MODULE
         try:
             profile = self.user.get_profile()
-        except Exception, e:
-            print e
+        except Exception as e:
+            print(e)
             if self.user.is_authenticated():
                 profile = Profile.objects.get(user=self.user)
             else:
-                print "There is no user to get it's avatars for."
+                print("There is no user to get it's avatars for.")
                 return ''
         return profile
+
     def get_file(self, profile=None):
         # For compatibility with the official django-profile model I check
         # whether it's a path or just a filename.
@@ -56,9 +63,10 @@ class ResizedThumbnailNode(Node):
         # settings.AVATAR_DIRS[int]/str(User)/settings_DEFAULT_AVATAR_WIDTH/
         default = False
         try:
-            file_root = path.join(settings.MEDIA_ROOT,
-                profile.avatar[:profile.avatar.rindex('/')+1])
-            file_name = profile.avatar[profile.avatar.rindex('/')+1:]
+            file_root = path.join(
+                settings.MEDIA_ROOT,
+                profile.avatar[:profile.avatar.rindex('/') + 1])
+            file_name = profile.avatar[profile.avatar.rindex('/') + 1:]
         except:
             file_root = _settings.AVATARS_DIR
             if profile is not None and profile.avatar:
@@ -68,22 +76,24 @@ class ResizedThumbnailNode(Node):
                 file_name = _settings.DEFAULT_AVATAR
                 default = True
         return (file_root, file_name, default)
+
     def as_url(self, path):
         try:
             return path.replace(settings.MEDIA_ROOT, settings.MEDIA_URL)
         except:
             return ''
+
     def render(self, context):
         try:
             # If size is not an int, then it's a Variable, so try to resolve it.
             if not isinstance(self.size, int):
                 self.size = int(self.size.resolve(context))
             self.user = self.get_user(context)
-        except Exception, e:
-            print e
-            return '' # just die...
+        except Exception as e:
+            print(e)
+            return ''  # just die...
         if self.size > _settings.DEFAULT_AVATAR_WIDTH:
-            return '' # unacceptable
+            return ''  # unacceptable
         profile = self.get_profile()
         if not profile:
             return ''
@@ -110,19 +120,20 @@ class ResizedThumbnailNode(Node):
             dest_root = path.join(avatars_root, str(self.size))
             try:
                 makedirs(dest_root)
-            except Exception, e:
-                print e
+            except Exception as e:
+                print(e)
             # Save the new path for later...
             dest_path = path.join(dest_root, file_name)
         else:
             # Did my best...
-            return '' # fail silently
+            return ''  # fail silently
         orig_file.scale(self.size)
         if orig_file.write(dest_path):
             return self.as_url(dest_path)
         else:
-            print '=== ERROR ==='
-            return '' # damn! Close but no cigar...
+            print('=== ERROR ===')
+            return ''  # damn! Close but no cigar...
+
 
 @register.tag('avatar')
 def Thumbnail(parser, token):

@@ -235,7 +235,7 @@ def avatarchoose(request):
             image.convert("RGB").save(avatar.image.path, "JPEG")
             avatar.save()
             return HttpResponseRedirect('%scrop/' % request.path_info)
-            base, filename = os.path.split(avatar_path)
+            base, filename = os.path.split(avatar.image.path)
             generic, extension = os.path.splitext(filename)
     if DEFAULT_AVATAR:
         base, filename = os.path.split(DEFAULT_AVATAR)

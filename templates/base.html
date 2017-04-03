@@ -9,7 +9,7 @@
   	<!--[if IE]><link rel="stylesheet" href="{{ MEDIA_URL}}css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 	<link rel="stylesheet" href="{{ MEDIA_URL}}css/django-profile.css" type="text/css" media="screen, projection" />
     {% block extracss %}{% endblock %}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{ MEDIA_URL }}js/jquery-1.2.6.min.js"></script>
 	<meta name="robots" content="{% block robots %}index,follow{% endblock %}" />
 	{% block extrahead %}{% endblock extrahead %}
 	<link rel="shortcut icon" href="/media/images/blankon.ico" type="image/x-icon" />
@@ -29,7 +29,7 @@
 					{% if user.is_authenticated %}
 					<li><a href="{% url profile_overview %}">{% trans "Profile" %}</a></li>
    				<li><a href="{% url logout %}">{% trans "Logout" %}</a></li>
-					{% else %} 
+					{% else %}
 					<li><a href="{% url profile_overview %}">{% trans "Login" %}</a></li>
 					<li><a href="{% url signup %}">{% trans "Register" %}</a></li>
   				{% endif %}
